@@ -93,7 +93,3 @@ Por ahora, sólo se deja un jugador, y las teclas son:<br><br>
 | Izquierda | Izquierda   |
 | Derecha   | Derecha     |
 <br>
-
- "ENTER    - Pausa",
-
-<br>
