@@ -81,7 +81,7 @@ Por ahora, sólo se deja un jugador, y las teclas son:<br><br>
 
 | Tecla     | Acción      |
 | --------- | ------------|
-|  F1       | Muestra OSS |
+|  F1       | Muestra OSD |
 |  ESC      | Salir OSD   |
 | Arriba    | Seleccionar |
 | Abajo     | Seleccionar |
