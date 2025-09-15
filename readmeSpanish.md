@@ -1,5 +1,5 @@
 # ESP32 Tiny Total SMS Public v0.0.0.1
-<br><br>
+<br>
 <h1>Release v0.0.0.1</h1>
 Las características son:
 <ul>
@@ -8,7 +8,8 @@ Las características son:
  <li>Sonido DAC real interno.</li>
  <li>VGA DAC222.</li>
  <li>Proyecto compatible con Arduino IDE, PlatformIO, ArduinoDroid y Web Editor.</li>
- <li>60 fps reales</li>
+ <li>60 fps reales.</li>
+ <li>Basado en el Total SMS x86 SDL (ITotalJustice).</li>
 </ul>
 
 
