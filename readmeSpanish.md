@@ -10,6 +10,7 @@ Las características son:
  <li>Proyecto compatible con Arduino IDE, PlatformIO, ArduinoDroid y Web Editor.</li>
  <li>60 fps reales.</li>
  <li>Basado en el Total SMS x86 SDL (ITotalJustice).</li>
+ <li>ROMS de 256 KB (262155 bytes).</li>
 </ul>
 
 
@@ -36,7 +37,8 @@ Posteriormente, desde el OSD podremos lanzar la ROM guardada, desde la opción L
 Por ahora, sólo podemos guardar una ROM en la FLASH, y la zona 0x110000 no se borra, tan sólo se sobreescribe hasta el tamaño del fichero, salvo que hagamos un borrado
 del ESP32. Por tanto, dado que el emulador intenta buscar una cabecera válida de SEGA a partir de la posición 0x110000, si primero grabamos una ROM grande con 
 una cabecera válida (128 KB), y posteriormente grabamos otra de menor tamaño (32 KB) sin cabecera válida, al buscar encuentra la válida más grande, dado que a
-partir de 32 KB no se ha borrado la información de los 128 KB, tan sólo se ha sobreescrito los 32 KB. Con roms de cabecera válida, nunca tendremos problemas.
+partir de 32 KB no se ha borrado la información de los 128 KB, tan sólo se ha sobreescrito los 32 KB. Con roms de cabecera válida, nunca tendremos problemas.<br>
+Por ahora, aunque la tool deja grabar, en el emulador sólo se van a leer bien, ROMS de 256 KB (262155 bytes).
 
 
 <br><br>
