@@ -10,6 +10,7 @@ The features are:
  <li>Project compatible with Arduino IDE, PlatformIO, ArduinoDroid, and Web Editor.</li>
  <li>60 real frames per second.</li>
  <li>Based on Total SMS x86 SDL (ITotalJustice).</li>
+ <li>256 KB ROMs (262155 bytes).</li>
 </ul>
 
 
@@ -36,7 +37,8 @@ Subsequently, from the OSD, we can launch the saved ROM from the Launch ROM opti
 For now, we can only save one ROM in the FLASH, and the 0x110000 area is not deleted, it is only overwritten up to the size of the file, unless we delete
 the ESP32. Therefore, given that the emulator attempts to find a valid SEGA header starting at position 0x110000, if we first record a large ROM with 
 a valid header (128 KB), and then we record another smaller one (32 KB) without a valid header, when searching it finds the larger valid one, since
-from 32 KB onwards the 128 KB information has not been deleted, only the 32 KB has been overwritten. With valid header ROMs, we will never have problems.
+from 32 KB onwards the 128 KB information has not been deleted, only the 32 KB has been overwritten. With valid header ROMs, we will never have problems.<br>
+For now, although the tool allows recording, only 256 KB (262155 bytes) ROMS will read properly in the emulator.
 
 
 <br><br>
