@@ -6,7 +6,7 @@ The features are:
  <li>TTGO VGA32 v1.x (ESP32S2 without PSRAM).</li>
  <li>PS/2 keyboard.</li>
  <li>Real internal DAC sound.</li>
- <li>VGA DAC222.</li>
+ <li>VGA DAC R2R RGB222.</li>
  <li>Project compatible with Arduino IDE, PlatformIO, ArduinoDroid, and Web Editor.</li>
  <li>60 real frames per second.</li>
  <li>Based on Total SMS x86 SDL (ITotalJustice).</li>
@@ -41,7 +41,7 @@ from 32 KB onwards the 128 KB information has not been deleted, only the 32 KB h
 
 <br><br>
 <h1>Video modes</h1>
-There are 7 video modes selectable at start-up, for 500 milliseconds, or on-the-fly, from the OSD under the <b>Video Mode</b> option:<br><br>
+There are 8 video modes selectable at start-up, for 500 milliseconds, or on-the-fly, from the OSD under the <b>Video Mode</b> option:<br><br>
 
 | Tecla | Video mode                         |
 | ----- | -----------------------------------|
