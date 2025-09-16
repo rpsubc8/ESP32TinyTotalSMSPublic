@@ -6,7 +6,7 @@ Las características son:
  <li>TTGO VGA32 v1.x (ESP32S2 sin PSRAM).</li>
  <li>Teclado PS/2.</li>
  <li>Sonido DAC real interno.</li>
- <li>VGA DAC222.</li>
+ <li>VGA DAC R2R RGB222.</li>
  <li>Proyecto compatible con Arduino IDE, PlatformIO, ArduinoDroid y Web Editor.</li>
  <li>60 fps reales.</li>
  <li>Basado en el Total SMS x86 SDL (ITotalJustice).</li>
@@ -41,7 +41,7 @@ partir de 32 KB no se ha borrado la información de los 128 KB, tan sólo se ha 
 
 <br><br>
 <h1>Modos de video</h1>
-Existen 7 modos de video seleccionables en el arranque, durante 500 milisegundos, o en caliente, desde el OSD en la opción <b>Modo de video</b>:<br><br>
+Existen 8 modos de video seleccionables en el arranque, durante 500 milisegundos, o en caliente, desde el OSD en la opción <b>Modo de video</b>:<br><br>
 
 | Tecla | Modo de video                      |
 | ----- | -----------------------------------|
