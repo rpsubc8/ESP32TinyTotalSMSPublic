@@ -114,11 +114,11 @@ Por ahora, sólo se deja un jugador, y las teclas son:<br><br>
 Se permite quemar una ROM desde UART, con cualquier aplicación de terminal, como puede ser el putty, Realterm, terminal de VSCode o cualquiera similar de 
 Android, Linux, etc...<br>
 <center><img src='https://raw.githubusercontent.com/rpsubc8/ESP32TinyTotalSMSPublic/main/preview/tooltomeko.gif'></center>
-Tan sólo se debe convertir le fichero binario a Hexadecimal ASCII, quitando el 0x de cada valor, y dejando un código CR LN por cada línea.<br><br>
+Tan sólo se debe convertir el fichero binario a Hexadecimal ASCII, quitando el 0x de cada valor, y dejando un código CR LN por cada línea.<br><br>
 
 <a href='https://tomeko.net/online_tools/file_to_hex.php?lang=en'>https://tomeko.net/online_tools/file_to_hex.php?lang=en</a>
 
-Desde el OSD se debe seleccionar la velocidad.
+Desde el OSD se debe seleccionar la velocidad.<br>
 
 Un archivo válido, tendría el estilo con 16 bytes por línea (32 caracteres):<br><br>
 
