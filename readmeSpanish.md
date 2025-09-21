@@ -10,7 +10,7 @@ Las características son:
  <li>Proyecto compatible con Arduino IDE, PlatformIO, ArduinoDroid y Web Editor.</li>
  <li>60 fps reales.</li>
  <li>Basado en el Total SMS x86 SDL (ITotalJustice).</li>
- <li>ROMS de 256 KB (262155 bytes).</li>
+ <li>ROMS de hasta 1 MB (1048576 bytes).</li>
 </ul>
 
 
@@ -34,11 +34,21 @@ No necesitamos volver a grabar el resto de archivos, como el emulador, particion
 <center><img src='https://raw.githubusercontent.com/rpsubc8/ESP32TinyTotalSMSPublic/main/preview/extrom.gif'></center>
 Este offset es compatible con las particiones SPIFFS de Arduino IDE y PlaformIO, por lo que no se ha usado ningún esquema de partición custom.
 Posteriormente, desde el OSD podremos lanzar la ROM guardada, desde la opción Lanzar ROM (Flash 0x110000).<br>
-Por ahora, sólo podemos guardar una ROM en la FLASH, y la zona 0x110000 no se borra, tan sólo se sobreescribe hasta el tamaño del fichero, salvo que hagamos un borrado
-del ESP32. Por tanto, dado que el emulador intenta buscar una cabecera válida de SEGA a partir de la posición 0x110000, si primero grabamos una ROM grande con 
-una cabecera válida (128 KB), y posteriormente grabamos otra de menor tamaño (32 KB) sin cabecera válida, al buscar encuentra la válida más grande, dado que a
-partir de 32 KB no se ha borrado la información de los 128 KB, tan sólo se ha sobreescrito los 32 KB. Con roms de cabecera válida, nunca tendremos problemas.<br>
-Por ahora, aunque la tool deja grabar, en el emulador sólo se van a leer bien, ROMS de 256 KB (262155 bytes).
+Por ahora, sólo podemos guardar una ROM en la FLASH, y la zona 0x110000 no se borra, tan sólo se sobreescribe hasta el tamaño del fichero, salvo que hagamos un borrado del ESP32. Por tanto, dado que el emulador intenta buscar una cabecera válida de SEGA a partir de la posición 0x110000, si primero grabamos una ROM grande con una cabecera válida (128 KB), y posteriormente grabamos otra de menor tamaño (8 KB) sin cabecera válida, al buscar encuentra la válida más grande, dado que a
+partir de 8 KB no se ha borrado la información de los 128 KB, tan sólo se ha sobreescrito los 8 KB primeros. Con roms de cabecera válida, nunca tendremos problemas.<br>
+Para encontrar una cabecera válidas de SEGA, siempre se buscan las posiciones:<br><br>
+
+| Hex    | Decimal |
+| ------ | ------- |
+| 0x7FF0 | 32752   |
+| 0x3FF0 | 16368   |
+| 0x1FF0 | 8176    |
+
+<br>
+
+De ahí el posible problema de solape, si no se hace un borrado.<br>
+Desde el OSD se puede borrar dede 8 KB hasta 1 MB de la Flash desde la posición 0x110000.
+
 
 
 <br><br>
@@ -96,3 +106,26 @@ Por ahora, sólo se deja un jugador, y las teclas son:<br><br>
 | Izquierda | Izquierda   |
 | Derecha   | Derecha     |
 <br>
+
+
+
+<br><br>
+<h1>UART</h1>
+Se permite quemar una ROM desde UART, con cualquier aplicación de terminal, como puede ser el putty, Realterm, terminal de VSCode o cualquiera similar de 
+Android, Linux, etc...<br>
+Tan sólo se debe convertir le fichero binario a Hexadecimal ASCII, quitando el 0x de cada valor, y dejando un código CR LN por cada línea.
+
+https://tomeko.net/online_tools/file_to_hex.php?lang=en
+
+Desde el OSD se debe seleccionar la velocidad.
+
+Un archivo válido, tendría el estilo con 16 bytes por línea (32 caracteres):<br><br>
+
+F3ED5631F0DF1865F5E7F1D3BEC9FFFF
+E7AF0EBEEDA3F5F1ED7920F8C911E081
+...
+FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+
+<br>
+Si se usa Realterm de Windows, es necesario poner una espera por cada línea a transmitir del fichero, por ejemplo 1 ms. Lo mismo, para otras plataformas.
