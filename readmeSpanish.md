@@ -113,19 +113,25 @@ Por ahora, sólo se deja un jugador, y las teclas son:<br><br>
 <h1>UART</h1>
 Se permite quemar una ROM desde UART, con cualquier aplicación de terminal, como puede ser el putty, Realterm, terminal de VSCode o cualquiera similar de 
 Android, Linux, etc...<br>
-Tan sólo se debe convertir le fichero binario a Hexadecimal ASCII, quitando el 0x de cada valor, y dejando un código CR LN por cada línea.<br>
+<center><img src='https://raw.githubusercontent.com/rpsubc8/ESP32TinyTotalSMSPublic/main/preview/tooltomeko.gif'></center>
+Tan sólo se debe convertir le fichero binario a Hexadecimal ASCII, quitando el 0x de cada valor, y dejando un código CR LN por cada línea.<br><br>
 
-https://tomeko.net/online_tools/file_to_hex.php?lang=en
+<a href='https://tomeko.net/online_tools/file_to_hex.php?lang=en'>https://tomeko.net/online_tools/file_to_hex.php?lang=en</a>
 
 Desde el OSD se debe seleccionar la velocidad.
 
 Un archivo válido, tendría el estilo con 16 bytes por línea (32 caracteres):<br><br>
 
+<pre>
 F3ED5631F0DF1865F5E7F1D3BEC9FFFF
 E7AF0EBEEDA3F5F1ED7920F8C911E081
 ...
 FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
 FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+</pre>
 
 <br>
-Si se usa Realterm de Windows, es necesario poner una espera por cada línea a transmitir del fichero, por ejemplo 1 ms. Lo mismo, para otras plataformas.
+<center><img src='https://raw.githubusercontent.com/rpsubc8/ESP32TinyTotalSMSPublic/main/preview/realterm00.gif'></center>
+Si se usa Realterm de Windows, es necesario poner una espera por cada línea a transmitir del fichero, por ejemplo 1 ms, en el combobox (Line delay in ms). Lo mismo, para otras plataformas.<br>
+
+<center><img src='https://raw.githubusercontent.com/rpsubc8/ESP32TinyTotalSMSPublic/main/preview/realterm01.gif'></center>
