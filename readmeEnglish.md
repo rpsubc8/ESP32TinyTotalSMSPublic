@@ -10,7 +10,7 @@ The features are:
  <li>Project compatible with Arduino IDE, PlatformIO, ArduinoDroid, and Web Editor.</li>
  <li>60 real frames per second.</li>
  <li>Based on Total SMS x86 SDL (ITotalJustice).</li>
- <li>ROMs up to 1 MB (1,048,576 bytes).</li>
+ <li>ROMs up to 1 MB (1048576 bytes).</li>
 </ul>
 
 
