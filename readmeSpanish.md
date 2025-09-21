@@ -1,6 +1,6 @@
 # ESP32 Tiny Total SMS Public v0.0.0.2
 <br>
-<h1>Release v0.0.0.1</h1>
+<h1>Release v0.0.0.2</h1>
 Las características son:
 <ul>
  <li>TTGO VGA32 v1.x (ESP32S2 sin PSRAM).</li>
