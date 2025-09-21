@@ -1,4 +1,4 @@
-# ESP32 Tiny Total SMS Public v0.0.0.1
+# ESP32 Tiny Total SMS Public v0.0.0.2
 <br>
 <h1>Release v0.0.0.1</h1>
 Las características son:
@@ -113,7 +113,7 @@ Por ahora, sólo se deja un jugador, y las teclas son:<br><br>
 <h1>UART</h1>
 Se permite quemar una ROM desde UART, con cualquier aplicación de terminal, como puede ser el putty, Realterm, terminal de VSCode o cualquiera similar de 
 Android, Linux, etc...<br>
-Tan sólo se debe convertir le fichero binario a Hexadecimal ASCII, quitando el 0x de cada valor, y dejando un código CR LN por cada línea.
+Tan sólo se debe convertir le fichero binario a Hexadecimal ASCII, quitando el 0x de cada valor, y dejando un código CR LN por cada línea.<br>
 
 https://tomeko.net/online_tools/file_to_hex.php?lang=en
 
