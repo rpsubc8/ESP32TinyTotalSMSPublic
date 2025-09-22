@@ -36,7 +36,7 @@ Este offset es compatible con las particiones SPIFFS de Arduino IDE y PlaformIO,
 Posteriormente, desde el OSD podremos lanzar la ROM guardada, desde la opción Lanzar ROM (Flash 0x110000).<br>
 Por ahora, sólo podemos guardar una ROM en la FLASH, y la zona 0x110000 no se borra, tan sólo se sobreescribe hasta el tamaño del fichero, salvo que hagamos un borrado del ESP32. Por tanto, dado que el emulador intenta buscar una cabecera válida de SEGA a partir de la posición 0x110000, si primero grabamos una ROM grande con una cabecera válida (128 KB), y posteriormente grabamos otra de menor tamaño (8 KB) sin cabecera válida, al buscar encuentra la válida más grande, dado que a
 partir de 8 KB no se ha borrado la información de los 128 KB, tan sólo se ha sobreescrito los 8 KB primeros. Con roms de cabecera válida, nunca tendremos problemas.<br>
-Para encontrar una cabecera válidas de SEGA, siempre se buscan las posiciones:<br><br>
+Para encontrar una cabecera válida de SEGA, siempre se buscan las posiciones:<br><br>
 
 | Hex    | Decimal |
 | ------ | ------- |
@@ -47,7 +47,7 @@ Para encontrar una cabecera válidas de SEGA, siempre se buscan las posiciones:<
 <br>
 
 De ahí el posible problema de solape, si no se hace un borrado.<br>
-Desde el OSD se puede borrar dede 8 KB hasta 1 MB de la Flash desde la posición 0x110000.
+Desde el OSD se puede borrar desde 8 KB hasta 1 MB de la Flash desde la posición 0x110000.
 
 
 
